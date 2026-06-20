@@ -85,6 +85,8 @@ Java 检查包括：
 - pathlib / tempfile / subprocess
 - pytest
 
+许可证：MIT License
+
 说明：PDF 解析可以作为增强功能加入，例如使用 `pypdf`。当前 MVP 先稳定支持 txt / md 和直接粘贴文本。
 
 ## 本地运行方式
@@ -122,6 +124,22 @@ pytest
 
 如果本机没有安装 `gcc` 或 `javac`，代码检查器会提示跳过编译检查，静态检查仍然可用。
 
+## 开发与截图生成
+
+如果需要重新生成 README 截图：
+
+```bash
+pip install -r requirements-dev.txt
+python -m playwright install chromium
+python scripts/capture_screenshots.py
+```
+
+截图会写入：
+
+```text
+docs/screenshots/
+```
+
 ## 示例数据
 
 项目内置了 4 个示例文件：
@@ -145,9 +163,17 @@ outputs/exam_review_report_20260620_120000.md
 
 ## Demo Screenshots
 
-> 截图 1：GitHub README 速读器  
-> 截图 2：Java/C 实验代码检查器  
-> 截图 3：期末资料整理 Agent
+### GitHub README 速读器
+
+![GitHub README 速读器](docs/screenshots/01-readme-reader.png)
+
+### Java/C 实验代码检查器
+
+![Java/C 实验代码检查器](docs/screenshots/02-code-checker.png)
+
+### 期末资料整理 Agent
+
+![期末资料整理 Agent](docs/screenshots/03-exam-agent.png)
 
 建议截图方式：
 
